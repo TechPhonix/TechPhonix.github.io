@@ -33,7 +33,11 @@
             $("#news").click(function(){
                 resetAll();
                 document.getElementById('news').className = 'active';
-                $("#ChangeThis").html("<b>Link for setup https://www.dropbox.com/s/hv0a4kb5fbhe4ko/MyBoard_1.5.exe?dl=0 </b>");
+				$("#ChangeThis").html("");
+				var link = document.createElement('a');
+				link.textContent = 'Eips Installer';
+				link.href = 'https://www.dropbox.com/s/hv0a4kb5fbhe4ko/MyBoard_1.5.exe?dl=0';
+				document.getElementById('ChangeThis').appendChild(link);
             });
 
             $("#contact").click(function(){
@@ -63,7 +67,9 @@
     </div>
 </section>
 
-<p id="ChangeThis">Site is under construction</p>
+<section id="content">
+    <div id="ChangeThis">Site is under construction</div>
+</section>
 
 <section id="footer">
     <div class="container">
