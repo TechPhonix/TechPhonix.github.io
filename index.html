@@ -23,15 +23,15 @@
             $("#content").html("<b>Hello world!</b>");
             $(this).css("background-color", "lightgray");
             });*/
-	    function load_home() {
-	    	document.getElementById("ChangeThis").innerHTML='<object type="text/html" data="footer.html" ></object>';
+	    function load_page(page) {
+	    	document.getElementById("ChangeThis").innerHTML='<object type="text/html" data="/"+page+"/".html" ></object>';
 	    }
 		
             $("#home").click(function(){
                 resetAll();
                 document.getElementById('home').className = 'active';
                 $("#ChangeThis").html("<b>Site is under construction</b>");
-		    load_home();
+		    load_page(footer);
             });
 
             $("#news").click(function(){
